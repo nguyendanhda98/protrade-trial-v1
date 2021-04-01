@@ -127,6 +127,16 @@ table {
 
 //CSS
 
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+}
 .border {
   border: 1px red solid;
 }
@@ -330,6 +340,9 @@ table {
 .content {
   display: grid;
   grid-template-columns: 1fr 348px 398px;
+  grid-gap: 1.5px;
+  background-color: #131722;
+
   .first {
     height: calc(100vh - 43.53px);
     .top {
@@ -352,6 +365,7 @@ table {
   .second {
     height: calc(100vh - 43.53px);
     width: 100%;
+
     .top {
       background-color: #2f3240;
       color: #fff;
@@ -360,12 +374,13 @@ table {
       font-size: 12.8px;
       line-height: 21.3333px;
       margin: 1px;
-      overflow-x: hidden;
-      overflow-y: auto;
+      overflow-x: hidden !important;
+      //   overflow-y: auto;
       quotes: auto;
       overflow: auto;
       height: 55%;
       .history-title {
+        border-bottom: 1px #444 solid;
         border-spacing: 1.11111px;
         color: #fff;
         font-family: Helvetica, Arial, sans-serif;
@@ -459,16 +474,27 @@ table {
         grid-template-columns: 55.31px 113.14px 114.25px 55.31px;
         grid-auto-rows: 26.67px;
         grid-gap: 0;
+        border-left: 1px solid #3a3d49;
         .kl {
           text-align: center;
+          border-bottom: 1px solid #3a3d49;
+          line-height: 26.67px;
         }
         .price-sell-num {
           padding-left: 55px;
+          color: #00ff00;
+          border-bottom: 1px solid #3a3d49;
+          line-height: 26.67px;
         }
         .price-buy-num {
+          color: #00ff00;
           padding-left: 12px;
+          border-bottom: 1px solid #3a3d49;
+          border-right: 1px solid #3a3d49;
+          line-height: 26.67px;
         }
         .kl-buy {
+          background: #3a3d49;
           border-left: 1px solid #444;
           color: #ccc;
           font-family: Helvetica, Arial, sans-serif;
@@ -478,6 +504,8 @@ table {
           quotes: auto;
         }
         .price-buy {
+          background: #3a3d49;
+
           border-left: none;
           color: #ccc;
           font-family: Helvetica, Arial, sans-serif;
@@ -485,8 +513,11 @@ table {
           line-height: 27px;
           padding: 0 5px;
           quotes: auto;
+          text-align: center;
         }
         .price-sell {
+          background: #3a3d49;
+
           border-left: 1px solid #444;
           color: #ccc;
           font-family: Helvetica, Arial, sans-serif;
@@ -496,6 +527,8 @@ table {
           quotes: auto;
         }
         .kl-sell {
+          background: #3a3d49;
+
           border-left: none;
           color: #ccc;
           font-family: Helvetica, Arial, sans-serif;
@@ -515,20 +548,85 @@ table {
       line-height: 21.3333px;
       margin: 1px;
       quotes: auto;
+      padding-top: 5px;
       .table {
         width: 100%;
+        tr {
+          color: #fff;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 21.3333px;
+          quotes: auto;
+        }
+        .title {
+          margin: 29px;
+          background: #3a3d49;
+          th {
+            background-color: rgba(120, 120, 120, 0.15);
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12.8px;
+            font-weight: 400;
+            line-height: 25px;
+            padding-right: 3px;
+            quotes: auto;
+            text-align: center;
+          }
+          .col1 {
+            text-align: left;
+            padding-left: 35px;
+            width: 121px;
+          }
+          .col2 {
+            text-align: left;
+          }
+          .col3 {
+            text-align: left;
+            padding-left: 3px;
+          }
+          .col5 {
+            text-align: right;
+          }
+        }
+
+        .color-green {
+          color: #00ff00;
+        }
+        .command {
+          text-align: center;
+        }
+        .code {
+          text-align: left;
+          padding-left: 8px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+        .even {
+          background: #3a3d49;
+        }
+        .all-kl {
+          text-align: right;
+          padding-right: 2px;
+        }
       }
     }
   }
   .third {
     height: calc(100vh - 43.53px);
+    max-width: 398px;
+    background: #2f3240;
+    color: #fff;
     .top {
-      height: 55%;
+      height: calc(100% - 260px);
       .title {
         display: flex;
+        position: relative;
         height: 40px;
         background-color: #2f3240;
         color: #fff;
+        padding-left: 25px;
+        padding-top: 5px;
+        width: 338.22px;
         ul {
           color: #fff;
           font-family: Helvetica, Arial, sans-serif;
@@ -548,7 +646,7 @@ table {
           line-height: 30px;
           list-style: outside none none;
           quotes: auto;
-          text-align: center;
+
           width: 50%;
         }
         .day {
@@ -561,8 +659,9 @@ table {
           line-height: 30px;
           list-style: outside none none;
           quotes: auto;
-          text-align: center;
+          text-align: left;
           text-decoration: none;
+          padding-left: 10px;
         }
         .condition {
           color: #fff;
@@ -570,23 +669,262 @@ table {
           display: inline-block;
           font-family: Helvetica, Arial, sans-serif;
           font-size: 12px;
-          font-weight: 400;
+          font-weight: 700;
+          line-height: 30px;
+          list-style: outside none none;
+          quotes: auto;
+          text-align: left;
+          text-decoration: none;
+          padding-left: 45px;
+        }
+        .icon {
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .reload1 {
+            -webkit-font-smoothing: antialiased;
+            color: orange;
+            cursor: pointer;
+            display: inline-block;
+
+            position: absolute;
+            quotes: auto;
+            left: 30px;
+            text-rendering: auto;
+            top: 8px;
+          }
+          .minus1 {
+            -webkit-font-smoothing: antialiased;
+            color: orange;
+            cursor: pointer;
+            display: inline-block;
+
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            position: absolute;
+            quotes: auto;
+            left: 60px;
+            bottom: 5px;
+            text-rendering: auto;
+          }
+        }
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        line-height: 32px;
+        quotes: auto;
+
+        .title1 {
+          background-color: #3a3d49;
+          th {
+            background-color: rgba(120, 120, 120, 0.15);
+            border-collapse: collapse;
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12.8px;
+            font-weight: 700;
+            line-height: 22px;
+            padding: 5px 0;
+            quotes: auto;
+            text-align: left;
+          }
+        }
+      }
+      .no-command {
+        border-collapse: collapse;
+        color: #777;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 50px;
+        quotes: auto;
+        text-align: center;
+      }
+    }
+    .bot {
+      height: 263px;
+      border: 1px solid #131722;
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      line-height: 21.3333px;
+      quotes: auto;
+      padding-top: 15px;
+      width: 100%;
+      position: relative;
+      .checkbox {
+        display: flex;
+
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        line-height: 30px;
+        list-style: none;
+        list-style: outside none none;
+        margin: 0;
+        margin-bottom: 5px;
+        padding-left: 1px;
+        padding-top: 8px;
+        quotes: auto;
+        .check {
+          padding-right: 5px;
+          .form-check-input {
+            margin-right: 0px;
+          }
+        }
+      }
+      .btn-buy {
+        background-color: green;
+        border-radius: 5px;
+        border-style: none;
+        color: #fff;
+        cursor: pointer;
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: 700;
+        height: 30px;
+        margin: 0 5px;
+        quotes: auto;
+        text-align: center;
+        width: 110px;
+      }
+      .btn-sell {
+        background-color: red;
+        border-radius: 5px;
+        border-style: none;
+        color: #fff;
+        cursor: pointer;
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: 700;
+        height: 30px;
+        margin: 0 5px;
+        quotes: auto;
+        text-align: center;
+        width: 110px;
+      }
+      .action {
+        display: flex;
+        clear: both;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        height: 35px;
+        line-height: 35px;
+        padding-bottom: 5px;
+        padding-left: 70px;
+        padding-top: 5px;
+        position: relative;
+        quotes: auto;
+      }
+      .row {
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        height: 35px;
+        line-height: 35px;
+        padding-bottom: 5px;
+        position: relative;
+        quotes: auto;
+        margin: 5px;
+        label {
+          color: #fff;
+          cursor: default;
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 35px;
+          padding-left: 5px;
+          quotes: auto;
+          width: 120px;
+        }
+        input {
+          border-radius: 4px;
+          border-style: none;
+          color: #000;
+          cursor: text;
+          font-family: Arial;
+          font-size: 13.3333px;
+          height: 30px;
+          padding: 0 5px;
+          quotes: auto;
+          width: 240px;
+        }
+      }
+      .menu {
+        color: #fff;
+        float: right;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        line-height: 30px;
+        list-style: none;
+        list-style: outside none none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        quotes: auto;
+        width: 398px;
+        background-color: #131722;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        li {
+          color: #fff;
+          cursor: pointer;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
           line-height: 30px;
           list-style: outside none none;
           quotes: auto;
           text-align: center;
-          text-decoration: none;
+          width: 33%;
+        }
+        .active {
+          background: #2f3240;
+          color: #f7941d;
+          margin: 0;
         }
       }
-      .table{
-          width: 100%;
-      }
-    }
-    .bot {
-      height: 45%;
     }
   }
 }
 .color-orange {
   color: #f7941d;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #2f3240;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #454545;
+}
+
+@media only screen and (max-width: 1024px) {
+  .topp {
+    display: none;
+  }
 }

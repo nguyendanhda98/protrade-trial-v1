@@ -129,6 +129,17 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+}
+
 .border {
   border: 1px red solid;
 }
@@ -326,6 +337,8 @@ table {
 .content {
   display: grid;
   grid-template-columns: 1fr 348px 398px;
+  grid-gap: 1.5px;
+  background-color: #131722;
 }
 .content .first {
   height: calc(100vh - 43.53px);
@@ -358,13 +371,13 @@ table {
   font-size: 12.8px;
   line-height: 21.3333px;
   margin: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: hidden !important;
   quotes: auto;
   overflow: auto;
   height: 55%;
 }
 .content .second .top .history-title {
+  border-bottom: 1px #444 solid;
   border-spacing: 1.11111px;
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
@@ -457,17 +470,28 @@ table {
   grid-template-columns: 55.31px 113.14px 114.25px 55.31px;
   grid-auto-rows: 26.67px;
   grid-gap: 0;
+  border-left: 1px solid #3a3d49;
 }
 .content .second .top .table .kl {
   text-align: center;
+  border-bottom: 1px solid #3a3d49;
+  line-height: 26.67px;
 }
 .content .second .top .table .price-sell-num {
   padding-left: 55px;
+  color: #00ff00;
+  border-bottom: 1px solid #3a3d49;
+  line-height: 26.67px;
 }
 .content .second .top .table .price-buy-num {
+  color: #00ff00;
   padding-left: 12px;
+  border-bottom: 1px solid #3a3d49;
+  border-right: 1px solid #3a3d49;
+  line-height: 26.67px;
 }
 .content .second .top .table .kl-buy {
+  background: #3a3d49;
   border-left: 1px solid #444;
   color: #ccc;
   font-family: Helvetica, Arial, sans-serif;
@@ -477,6 +501,7 @@ table {
   quotes: auto;
 }
 .content .second .top .table .price-buy {
+  background: #3a3d49;
   border-left: none;
   color: #ccc;
   font-family: Helvetica, Arial, sans-serif;
@@ -484,8 +509,10 @@ table {
   line-height: 27px;
   padding: 0 5px;
   quotes: auto;
+  text-align: center;
 }
 .content .second .top .table .price-sell {
+  background: #3a3d49;
   border-left: 1px solid #444;
   color: #ccc;
   font-family: Helvetica, Arial, sans-serif;
@@ -495,6 +522,7 @@ table {
   quotes: auto;
 }
 .content .second .top .table .kl-sell {
+  background: #3a3d49;
   border-left: none;
   color: #ccc;
   font-family: Helvetica, Arial, sans-serif;
@@ -511,21 +539,85 @@ table {
   line-height: 21.3333px;
   margin: 1px;
   quotes: auto;
+  padding-top: 5px;
 }
 .content .second .bot .table {
   width: 100%;
 }
+.content .second .bot .table tr {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  quotes: auto;
+}
+.content .second .bot .table .title {
+  margin: 29px;
+  background: #3a3d49;
+}
+.content .second .bot .table .title th {
+  background-color: rgba(120, 120, 120, 0.15);
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-right: 3px;
+  quotes: auto;
+  text-align: center;
+}
+.content .second .bot .table .title .col1 {
+  text-align: left;
+  padding-left: 35px;
+  width: 121px;
+}
+.content .second .bot .table .title .col2 {
+  text-align: left;
+}
+.content .second .bot .table .title .col3 {
+  text-align: left;
+  padding-left: 3px;
+}
+.content .second .bot .table .title .col5 {
+  text-align: right;
+}
+.content .second .bot .table .color-green {
+  color: #00ff00;
+}
+.content .second .bot .table .command {
+  text-align: center;
+}
+.content .second .bot .table .code {
+  text-align: left;
+  padding-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.content .second .bot .table .even {
+  background: #3a3d49;
+}
+.content .second .bot .table .all-kl {
+  text-align: right;
+  padding-right: 2px;
+}
 .content .third {
   height: calc(100vh - 43.53px);
+  max-width: 398px;
+  background: #2f3240;
+  color: #fff;
 }
 .content .third .top {
-  height: 55%;
+  height: calc(100% - 260px);
 }
 .content .third .top .title {
   display: flex;
+  position: relative;
   height: 40px;
   background-color: #2f3240;
   color: #fff;
+  padding-left: 25px;
+  padding-top: 5px;
+  width: 338.22px;
 }
 .content .third .top .title ul {
   color: #fff;
@@ -546,7 +638,6 @@ table {
   line-height: 30px;
   list-style: outside none none;
   quotes: auto;
-  text-align: center;
   width: 50%;
 }
 .content .third .top .title .day {
@@ -559,8 +650,9 @@ table {
   line-height: 30px;
   list-style: outside none none;
   quotes: auto;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
+  padding-left: 10px;
 }
 .content .third .top .title .condition {
   color: #fff;
@@ -568,22 +660,256 @@ table {
   display: inline-block;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 700;
+  line-height: 30px;
+  list-style: outside none none;
+  quotes: auto;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 45px;
+}
+.content .third .top .title .icon {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.content .third .top .title .icon .reload1 {
+  -webkit-font-smoothing: antialiased;
+  color: orange;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  quotes: auto;
+  left: 30px;
+  text-rendering: auto;
+  top: 8px;
+}
+.content .third .top .title .icon .minus1 {
+  -webkit-font-smoothing: antialiased;
+  color: orange;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 30px;
+  position: absolute;
+  quotes: auto;
+  left: 60px;
+  bottom: 5px;
+  text-rendering: auto;
+}
+.content .third .top .table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 32px;
+  quotes: auto;
+}
+.content .third .top .table .title1 {
+  background-color: #3a3d49;
+}
+.content .third .top .table .title1 th {
+  background-color: rgba(120, 120, 120, 0.15);
+  border-collapse: collapse;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 5px 0;
+  quotes: auto;
+  text-align: left;
+}
+.content .third .top .no-command {
+  border-collapse: collapse;
+  color: #777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 50px;
+  quotes: auto;
+  text-align: center;
+}
+.content .third .bot {
+  height: 263px;
+  border: 1px solid #131722;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  quotes: auto;
+  padding-top: 15px;
+  width: 100%;
+  position: relative;
+}
+.content .third .bot .checkbox {
+  display: flex;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 30px;
+  list-style: none;
+  list-style: outside none none;
+  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 1px;
+  padding-top: 8px;
+  quotes: auto;
+}
+.content .third .bot .checkbox .check {
+  padding-right: 5px;
+}
+.content .third .bot .checkbox .check .form-check-input {
+  margin-right: 0px;
+}
+.content .third .bot .btn-buy {
+  background-color: green;
+  border-radius: 5px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  margin: 0 5px;
+  quotes: auto;
+  text-align: center;
+  width: 110px;
+}
+.content .third .bot .btn-sell {
+  background-color: red;
+  border-radius: 5px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  margin: 0 5px;
+  quotes: auto;
+  text-align: center;
+  width: 110px;
+}
+.content .third .bot .action {
+  display: flex;
+  clear: both;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 35px;
+  line-height: 35px;
+  padding-bottom: 5px;
+  padding-left: 70px;
+  padding-top: 5px;
+  position: relative;
+  quotes: auto;
+}
+.content .third .bot .row {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 35px;
+  line-height: 35px;
+  padding-bottom: 5px;
+  position: relative;
+  quotes: auto;
+  margin: 5px;
+}
+.content .third .bot .row label {
+  color: #fff;
+  cursor: default;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 35px;
+  padding-left: 5px;
+  quotes: auto;
+  width: 120px;
+}
+.content .third .bot .row input {
+  border-radius: 4px;
+  border-style: none;
+  color: #000;
+  cursor: text;
+  font-family: Arial;
+  font-size: 13.3333px;
+  height: 30px;
+  padding: 0 5px;
+  quotes: auto;
+  width: 240px;
+}
+.content .third .bot .menu {
+  color: #fff;
+  float: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 30px;
+  list-style: none;
+  list-style: outside none none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  quotes: auto;
+  width: 398px;
+  background-color: #131722;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.content .third .bot .menu li {
+  color: #fff;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
   line-height: 30px;
   list-style: outside none none;
   quotes: auto;
   text-align: center;
-  text-decoration: none;
+  width: 33%;
 }
-.content .third .top .table {
-  width: 100%;
-}
-.content .third .bot {
-  height: 45%;
+.content .third .bot .menu .active {
+  background: #2f3240;
+  color: #f7941d;
+  margin: 0;
 }
 
 .color-orange {
   color: #f7941d;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #2f3240;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #454545;
+}
+
+@media only screen and (max-width: 1024px) {
+  .topp {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

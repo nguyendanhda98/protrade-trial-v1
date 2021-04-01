@@ -1,0 +1,529 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.border {
+  border: 1px red solid;
+}
+
+.header {
+  width: 100vw;
+  height: 41.53px;
+  background: #131722;
+  color: #fff;
+  padding-left: 10px;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+.header .topbar {
+  display: flex;
+  flex-direction: row;
+}
+.header .topbar .logo {
+  width: 127px;
+  height: 38px;
+}
+.header .topbar #time-date {
+  display: flex;
+  flex-direction: row;
+  padding-left: 8px;
+  padding-top: 7px;
+}
+.header .topbar #time-date .time {
+  color: #f7941d;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-left: 10px;
+  margin-right: 5px;
+  quotes: auto;
+  vertical-align: middle;
+}
+.header .topbar #time-date .date {
+  color: #f7941d;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21px;
+  margin-right: 5px;
+  quotes: auto;
+  vertical-align: middle;
+}
+.header .topbar ul {
+  color: #fff;
+  float: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21px;
+  list-style: none;
+  list-style: outside none none;
+  margin-top: 6px;
+  padding: 0 0 0 10px;
+  quotes: auto;
+  width: 100%;
+}
+.header .topbar li {
+  border-left: 1px solid #333;
+  box-sizing: border-box;
+  color: #fff;
+  float: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 22px;
+  line-height: 21px;
+  list-style: outside none none;
+  position: relative;
+  quotes: auto;
+  text-align: left;
+}
+.header .topbar .active {
+  color: #f7941d;
+}
+.header .topbar a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 700;
+  line-height: 25px;
+  list-style: outside none none;
+  padding: 0 10px;
+  quotes: auto;
+  text-align: left;
+  text-decoration: none;
+}
+.header .topbar .profitloss {
+  color: #f7941d;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  left: 540px;
+  line-height: 30px;
+  margin-top: 5px;
+  position: fixed;
+  quotes: auto;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+}
+.header .topbar .profitloss .number {
+  color: #ffd900;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  min-width: 80px;
+  padding-left: 0px;
+  margin-top: 1px;
+  quotes: auto;
+}
+.header .topbar .top {
+  background-color: #97037f;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 20px;
+  margin-left: 15px;
+  padding: 0 10px;
+  quotes: auto;
+}
+.header .topbar .profile {
+  color: #fff;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  justify-content: flex-end;
+  line-height: 21px;
+  position: absolute;
+  quotes: auto;
+  right: 0;
+  top: 0;
+  z-index: 101;
+}
+.header .topbar .profile .demo {
+  border: 1px solid #f7941d;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 25px;
+  margin-right: 10px;
+  margin-top: 8px;
+  padding: 0 10px;
+  quotes: auto;
+}
+.header .topbar .profile .upgrade {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21px;
+  margin-top: 11px;
+  quotes: auto;
+  text-align: right;
+}
+.header .topbar .profile .upgrade .goto-btn {
+  background-color: #f7941d;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 20px;
+  margin-left: 4px;
+  margin-right: 0;
+  padding: 0 10px;
+  quotes: auto;
+  text-align: right;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.header .topbar .profile .btn-icon {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13.44px;
+  line-height: 42px;
+  padding: 0 10px;
+  quotes: auto;
+  text-align: right;
+  text-decoration: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 348px 398px;
+}
+.content .first {
+  height: calc(100vh - 43.53px);
+}
+.content .first .top {
+  height: 55%;
+}
+.content .first .bot {
+  background-color: #2f3240;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 45%;
+  line-height: 21.3333px;
+  margin: 1px;
+  position: relative;
+  quotes: auto;
+}
+.content .second {
+  height: calc(100vh - 43.53px);
+  width: 100%;
+}
+.content .second .top {
+  background-color: #2f3240;
+  color: #fff;
+  flex: 1;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  margin: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  quotes: auto;
+  overflow: auto;
+  height: 55%;
+}
+.content .second .top .history-title {
+  border-spacing: 1.11111px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 42px;
+  line-height: 21.3333px;
+  quotes: auto;
+  display: flex;
+}
+.content .second .top .history-title .symbol {
+  border-spacing: 1.11111px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.3333px;
+  padding: 0 5px;
+  quotes: auto;
+  padding-top: 10px;
+}
+.content .second .top .history-title .col {
+  border-spacing: 1.11111px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  padding: 0 19px;
+  quotes: auto;
+}
+.content .second .top .history-title .color1 {
+  border-spacing: 1.11111px;
+  color: #00c5c5;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  quotes: auto;
+}
+.content .second .top .history-title .color2 {
+  border-spacing: 1.11111px;
+  color: #ffd900;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  quotes: auto;
+}
+.content .second .top .history-title .color3 {
+  border-spacing: 1.11111px;
+  color: #ff25ff;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21.3333px;
+  quotes: auto;
+}
+.content .second .top .tab {
+  color: #fff;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  justify-content: space-around;
+  line-height: 30px;
+  list-style: none;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  quotes: auto;
+  text-align: center;
+}
+.content .second .top .tab a {
+  color: #f0f0f0;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 30px;
+  list-style: outside none none;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+}
+.content .second .top .tab .active {
+  color: #f7941d;
+}
+.content .second .top .table {
+  display: grid;
+  grid-template-columns: 55.31px 113.14px 114.25px 55.31px;
+  grid-auto-rows: 26.67px;
+  grid-gap: 0;
+}
+.content .second .top .table .kl {
+  text-align: center;
+}
+.content .second .top .table .price-sell-num {
+  padding-left: 55px;
+}
+.content .second .top .table .price-buy-num {
+  padding-left: 12px;
+}
+.content .second .top .table .kl-buy {
+  border-left: 1px solid #444;
+  color: #ccc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 27px;
+  padding: 0 5px;
+  quotes: auto;
+}
+.content .second .top .table .price-buy {
+  border-left: none;
+  color: #ccc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 27px;
+  padding: 0 5px;
+  quotes: auto;
+}
+.content .second .top .table .price-sell {
+  border-left: 1px solid #444;
+  color: #ccc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 27px;
+  padding-left: 25px;
+  quotes: auto;
+}
+.content .second .top .table .kl-sell {
+  border-left: none;
+  color: #ccc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 27px;
+  quotes: auto;
+}
+.content .second .bot {
+  background-color: #2f3240;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  height: 45%;
+  line-height: 21.3333px;
+  margin: 1px;
+  quotes: auto;
+}
+.content .third {
+  height: calc(100vh - 43.53px);
+}
+.content .third .top {
+  height: 55%;
+}
+.content .third .bot {
+  height: 45%;
+}
+
+.color-orange {
+  color: #f7941d;
+}
+
+/*# sourceMappingURL=index.css.map */

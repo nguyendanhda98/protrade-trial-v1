@@ -1,0 +1,533 @@
+//Reset CSS
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//CSS
+
+.border {
+  border: 1px red solid;
+}
+
+.header {
+  width: 100vw;
+  height: 41.53px;
+  background: #131722;
+  color: #fff;
+  padding-left: 10px;
+  padding-top: 2px;
+  box-sizing: border-box;
+  .topbar {
+    display: flex;
+    flex-direction: row;
+
+    .logo {
+      width: 127px;
+      height: 38px;
+    }
+
+    #time-date {
+      display: flex;
+      flex-direction: row;
+      padding-left: 8px;
+      padding-top: 7px;
+
+      .time {
+        color: #f7941d;
+
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        font-weight: 700;
+        line-height: 21px;
+        margin-left: 10px;
+        margin-right: 5px;
+        quotes: auto;
+        vertical-align: middle;
+      }
+      .date {
+        color: #f7941d;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        line-height: 21px;
+        margin-right: 5px;
+        quotes: auto;
+        vertical-align: middle;
+      }
+    }
+    ul {
+      color: #fff;
+      float: left;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      line-height: 21px;
+      list-style: none;
+      list-style: outside none none;
+      margin-top: 6px;
+      padding: 0 0 0 10px;
+      quotes: auto;
+      width: 100%;
+    }
+    li {
+      border-left: 1px solid #333;
+      box-sizing: border-box;
+      color: #fff;
+      float: left;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      height: 22px;
+      line-height: 21px;
+      list-style: outside none none;
+      position: relative;
+      quotes: auto;
+      text-align: left;
+    }
+    .active {
+      color: #f7941d;
+    }
+    a {
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      font-weight: 700;
+      line-height: 25px;
+      list-style: outside none none;
+      padding: 0 10px;
+      quotes: auto;
+      text-align: left;
+      text-decoration: none;
+    }
+    .profitloss {
+      color: #f7941d;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      left: 540px;
+      line-height: 30px;
+      margin-top: 5px;
+      position: fixed;
+      quotes: auto;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      .number {
+        color: #ffd900;
+        display: inline-block;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 30px;
+        min-width: 80px;
+        padding-left: 0px;
+        margin-top: 1px;
+        quotes: auto;
+      }
+    }
+    .top {
+      background-color: #97037f;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      line-height: 20px;
+      margin-left: 15px;
+      padding: 0 10px;
+      quotes: auto;
+    }
+    .profile {
+      color: #fff;
+
+      display: flex;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      justify-content: flex-end;
+      line-height: 21px;
+      position: absolute;
+      quotes: auto;
+      right: 0;
+      top: 0;
+      z-index: 101;
+      .demo {
+        border: 1px solid #f7941d;
+        border-radius: 5px;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        font-weight: 700;
+        height: 25px;
+        line-height: 25px;
+        margin-right: 10px;
+        margin-top: 8px;
+        padding: 0 10px;
+        quotes: auto;
+      }
+      .upgrade {
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        line-height: 21px;
+        margin-top: 11px;
+        quotes: auto;
+        text-align: right;
+
+        .goto-btn {
+          background-color: #f7941d;
+          border-radius: 3px;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 20px;
+          margin-left: 4px;
+          margin-right: 0;
+          padding: 0 10px;
+          quotes: auto;
+          text-align: right;
+          text-decoration: none;
+          transition: all 0.15s;
+        }
+      }
+
+      .btn-icon {
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 13.44px;
+        line-height: 42px;
+        padding: 0 10px;
+        quotes: auto;
+        text-align: right;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 348px 398px;
+  .first {
+    height: calc(100vh - 43.53px);
+    .top {
+      height: 55%;
+    }
+    .bot {
+      background-color: #2f3240;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      height: 45%;
+      line-height: 21.3333px;
+      margin: 1px;
+      position: relative;
+      quotes: auto;
+    }
+  }
+  .second {
+    height: calc(100vh - 43.53px);
+    width: 100%;
+    .top {
+      background-color: #2f3240;
+      color: #fff;
+      flex: 1;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      line-height: 21.3333px;
+      margin: 1px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      quotes: auto;
+      overflow: auto;
+      height: 55%;
+      .history-title {
+        border-spacing: 1.11111px;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        height: 42px;
+        line-height: 21.3333px;
+        quotes: auto;
+        display: flex;
+
+        .symbol {
+          border-spacing: 1.11111px;
+          color: #fff;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 21.3333px;
+          padding: 0 5px;
+          quotes: auto;
+          padding-top: 10px;
+        }
+        .col {
+          border-spacing: 1.11111px;
+          color: #fff;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 21.3333px;
+          padding: 0 19px;
+          quotes: auto;
+        }
+        .color1 {
+          border-spacing: 1.11111px;
+          color: #00c5c5;
+          cursor: pointer;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 21.3333px;
+          quotes: auto;
+        }
+        .color2 {
+          border-spacing: 1.11111px;
+          color: #ffd900;
+          cursor: pointer;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 21.3333px;
+          quotes: auto;
+        }
+        .color3 {
+          border-spacing: 1.11111px;
+          color: #ff25ff;
+          cursor: pointer;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 21.3333px;
+          quotes: auto;
+        }
+      }
+      .tab {
+        color: #fff;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12.8px;
+        justify-content: space-around;
+        line-height: 30px;
+        list-style: none;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+        quotes: auto;
+        text-align: center;
+        a {
+          color: #f0f0f0;
+          cursor: pointer;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 30px;
+          list-style: outside none none;
+          quotes: auto;
+          text-align: center;
+          text-decoration: none;
+        }
+        .active {
+          color: #f7941d;
+        }
+      }
+      .table {
+        display: grid;
+        grid-template-columns: 55.31px 113.14px 114.25px 55.31px;
+        grid-auto-rows: 26.67px;
+        grid-gap: 0;
+        .kl {
+          text-align: center;
+          
+        }
+        .price-sell-num {
+          padding-left: 55px;
+        }
+        .price-buy-num {
+          padding-left: 12px;
+        }
+        .kl-buy {
+          border-left: 1px solid #444;
+          color: #ccc;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 27px;
+          padding: 0 5px;
+          quotes: auto;
+        }
+        .price-buy {
+          border-left: none;
+          color: #ccc;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 27px;
+          padding: 0 5px;
+          quotes: auto;
+        }
+        .price-sell {
+          border-left: 1px solid #444;
+          color: #ccc;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 27px;
+          padding-left: 25px;
+          quotes: auto;
+        }
+        .kl-sell {
+          border-left: none;
+          color: #ccc;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 27px;
+
+          quotes: auto;
+        }
+      }
+    }
+    .bot {
+      background-color: #2f3240;
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      height: 45%;
+      line-height: 21.3333px;
+      margin: 1px;
+      quotes: auto;
+    }
+  }
+  .third {
+    height: calc(100vh - 43.53px);
+    .top {
+      height: 55%;
+    }
+    .bot {
+      height: 45%;
+    }
+  }
+}
+.color-orange {
+  color: #f7941d;
+}

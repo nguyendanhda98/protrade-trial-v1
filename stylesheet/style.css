@@ -10735,7 +10735,12 @@ textarea.form-control-lg {
 
 .logo {
   height: 38px;
-  width: 127.11px;
+  width: 127px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21px;
+  quotes: auto;
 }
 
 body {
@@ -10745,8 +10750,17 @@ body {
 
 .header {
   background-color: #131722;
-  height: 7%;
-  max-height: 7%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  line-height: 21px;
+  padding: 8px 0;
+  position: fixed;
+  quotes: auto;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 .header .nav-link {
   color: #fff;

@@ -461,7 +461,6 @@ table {
         grid-gap: 0;
         .kl {
           text-align: center;
-          
         }
         .price-sell-num {
           padding-left: 55px;
@@ -516,12 +515,72 @@ table {
       line-height: 21.3333px;
       margin: 1px;
       quotes: auto;
+      .table {
+        width: 100%;
+      }
     }
   }
   .third {
     height: calc(100vh - 43.53px);
     .top {
       height: 55%;
+      .title {
+        display: flex;
+        height: 40px;
+        background-color: #2f3240;
+        color: #fff;
+        ul {
+          color: #fff;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 40px;
+          list-style: none;
+          list-style: outside none none;
+          margin: 0 60px 0 0;
+          padding: 0;
+          quotes: auto;
+        }
+        li {
+          color: #fff;
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12.8px;
+          line-height: 30px;
+          list-style: outside none none;
+          quotes: auto;
+          text-align: center;
+          width: 50%;
+        }
+        .day {
+          color: #f7941d;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 30px;
+          list-style: outside none none;
+          quotes: auto;
+          text-align: center;
+          text-decoration: none;
+        }
+        .condition {
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 30px;
+          list-style: outside none none;
+          quotes: auto;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+      .table{
+          width: 100%;
+      }
     }
     .bot {
       height: 45%;
